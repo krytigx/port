@@ -30,7 +30,7 @@ export default function HomePage() {
           {/* Row 1: Name and Image */}
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
             <motion.h1
-              className="leading-none text-[5rem] sm:text-[6rem] md:text-[12rem]"
+              className="leading-none text-[8rem] sm:text-[6rem] md:text-[12rem]"
             >
               <motion.span
                 initial={{ y: 200, opacity: 0 }}
