@@ -85,6 +85,6 @@ export function Footer() {
           </Link>
         </div>
       </div>
-    </footer>
+    </motion.footer>
   );
 }
