@@ -30,7 +30,7 @@ export default function HomePage() {
           {/* Row 1: Name and Image */}
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
             <motion.h1
-              className="leading-none text-[4rem] sm:text-[6rem] md:text-[12rem]"
+              className="leading-none text-[5rem] sm:text-[6rem] md:text-[12rem]"
             >
               <motion.span
                 initial={{ y: 200, opacity: 0 }}
@@ -89,13 +89,14 @@ export default function HomePage() {
             </motion.div>
 
             <motion.p
-              className="text-lg md:text-4xl leading-relaxed md:pl-[5rem] md:pt-0 pt-2"
+              className="text-lg md:text-4xl leading-relaxed mt-[6rem] pl-[6rem] text-right"
               initial={{ y: 50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.8, delay: 1 }}
+              transition={{ duration: 0.8, delay: 1.2 }}
             >
               Hello, I'm a freelancer specializing in minimal design with 10 years of expertise — based in Tokyo, working remote. Let's create!
             </motion.p>
+
           </div>
         </motion.div>
       </motion.section>
