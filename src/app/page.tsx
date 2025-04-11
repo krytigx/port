@@ -156,9 +156,6 @@ export default function HomePage() {
         </div>
       </motion.section>
 
-      <div className="w-screen bg-black">
-      </div> 
-
     <motion.footer
   className="w-screen bg-black text-white overflow-hidden"
   initial={{ y: 100, opacity: 0 }}
