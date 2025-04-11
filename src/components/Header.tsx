@@ -8,8 +8,10 @@ import { useState } from "react";
 
 const navItems = [
   { name: "Works", path: "/works" },
+  { name: "Resume", path: "https://docs.google.com/document/d/1ZRnGm8sv9rWIjJpl9enTNh8Rkty7aDSwK1j8OkAlCUU/edit?usp=sharing"}
   { name: "About", path: "/about" },
   { name: "Contact", path: "/contact" },
+  
 ];
 
 export function Header() {
