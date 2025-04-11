@@ -157,17 +157,61 @@ export default function HomePage() {
       </motion.section>
 
       <div className="w-screen bg-black">
-  <motion.section
-    className="text-white py-20 text-center"
-    initial={{ opacity: 0, y: 50 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    transition={{ duration: 1.2 }}
-  >
-    <h2 className="text-3xl font-bold">Let’s Build Something Beautiful Together</h2>
-  </motion.section>
-</div>
+      </div> 
 
+    <<motion.footer
+  className="w-screen bg-black text-white overflow-hidden"
+  initial={{ y: 100, opacity: 0 }}
+  whileInView={{ y: 0, opacity: 1 }}
+  viewport={{ once: true }}
+  transition={{ duration: 1.2, ease: 'easeOut' }}
+>
+  <div className="max-w-7xl mx-auto px-5 md:px-10 py-20">
+    <h2 className="text-3xl font-bold text-center mb-12">
+      Let’s Build Something Beautiful Together
+    </h2>
+
+    <div className="flex flex-col md:flex-row justify-between text-sm mb-12 gap-10">
+      <div>
+        <p className="font-semibold">Available For Work</p>
+        <p className="opacity-70">+81 (0)90 1234 5678</p>
+        <p className="opacity-70">hello@yuya.com</p>
+      </div>
+      <div>
+        <p className="font-semibold">Designed & Developed</p>
+        <p className="opacity-70">by Peter Hodak</p>
+      </div>
+      <div>
+        <p className="font-semibold">All rights reserved,</p>
+        <p className="opacity-70">YUYA ©2024</p>
+      </div>
     </div>
+
+    <div className="flex justify-center gap-6 mb-12">
+      <Link href="https://linkedin.com" target="_blank" className="hover:underline">
+        Linkedin
+      </Link>
+      <Link href="https://twitter.com" target="_blank" className="hover:underline">
+        Twitter
+      </Link>
+      <Link href="https://behance.net" target="_blank" className="hover:underline">
+        Behance
+      </Link>
+    </div>
+
+    <div className="flex flex-col md:flex-row justify-between items-center border-t border-white/20 pt-10 gap-6">
+      <p className="text-base font-semibold text-center">
+        Curious about what we can create together? Let’s bring something extraordinary to life!
+      </p>
+      <Link
+        href="/contact"
+        className="bg-white text-black px-6 py-2 rounded hover:bg-gray-200 transition"
+      >
+        Get in Touch
+      </Link>
+    </div>
+  </div>
+</motion.footer>
+    
   );
 }
