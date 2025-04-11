@@ -212,6 +212,7 @@ export default function HomePage() {
     </div>
   </div>
 </motion.footer>
+      </div>
 
   );
 }
