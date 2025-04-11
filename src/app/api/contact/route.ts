@@ -9,7 +9,6 @@ export async function POST(req: NextRequest) {
   if (!name || !email || !message) {
     return NextResponse.json({ error: "Missing fields" }, { status: 400 });
   }
-
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
@@ -17,14 +16,20 @@ export async function POST(req: NextRequest) {
       pass: process.env.EMAIL_PASS,
     },
   });
-
   const mailOptions = {
-    from: email,
-    to: process.env.EMAIL_TO || process.env.EMAIL_USER,
-    subject: `New message from ${name}`,
-    text: message,
-  };
+  from: `"${name}" <${process.env.EMAIL_USER}>`, // display name is user, actual sender is you
+  to: process.env.EMAIL_TO,
+  subject: `New contact form submission from ${name}`,
+  text: `You have a new message:
 
+  Name: ${name}
+  Email: ${email}
+  
+  Message:
+  ${message}
+  `,
+    replyTo: email, // so replies go to the user
+  };
   try {
     await transporter.sendMail(mailOptions);
     return NextResponse.json({ success: true });
