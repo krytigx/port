@@ -59,7 +59,7 @@ export default function HomePage() {
               transition={{ duration: 0.8, delay: 1 }}
             >
               <Image
-                src="https://raw.githubusercontent.com/krytigx/Portfolio_images/refs/heads/main/place_holder.jpg"
+                src="https://raw.githubusercontent.com/krytigx/port/refs/heads/main/Images/place_holder.jpg"
                 alt="kryptigx"
                 fill
                 className="object-cover"
