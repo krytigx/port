@@ -59,7 +59,7 @@ export default function HomePage() {
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <div className="w-24 h-24 md:w-94 md:h-94 relative overflow-hidden rounded">
+            <div className="w-94 h-94 md:w-94 md:h-94 relative overflow-hidden rounded">
               <Image
                 src="https://raw.githubusercontent.com/krytigx/Portfolio_images/refs/heads/main/place_holder.jpg"
                 alt="kryptigx"
