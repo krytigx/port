@@ -90,13 +90,14 @@ export default function HomePage() {
             </motion.div>
            
             <motion.p
-              className="text-lg md:text-4xl leading-relaxed mt-[6rem] pl-[6rem] text-right"
+              className="text-lg md:text-4xl leading-relaxed text-right md:text-left ml-0 md:ml-[17rem]"
               initial={{ y: 50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 1.2 }}
             >
               Hello, I'm a freelancer specializing in minimal design with 10 years of expertise — based in Tokyo, working remote. Let's create!
             </motion.p>
+
 
           </div>
         </motion.div>
