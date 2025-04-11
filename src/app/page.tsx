@@ -59,7 +59,7 @@ export default function HomePage() {
               transition={{ duration: 0.8, delay: 1 }}
             >
               <Image
-                src="public/images/place_holder.jpg"
+                src="/images/place_holder.jpg"
                 alt="kryptigx"
                 fill
                 className="object-cover"
