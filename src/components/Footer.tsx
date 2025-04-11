@@ -6,11 +6,11 @@ import { motion } from "framer-motion";
 export function Footer() {
   return (
     <motion.footer
-      className="w-full bg-black text-white py-10"
-      initial={{ y: 100, opacity: 0 }}
+      className="relative z-10 w-full bg-black text-white py-10"
+      initial={{ y: 200, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
       viewport={{ once: true }}
-      transition={{ duration: 1.2, ease: "easeOut" }}
+      transition={{ duration: 1.2, ease: "easeOut", delay: 0.2 }}
     >
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-5 md:px-10">
         <div className="flex flex-col gap-1">
