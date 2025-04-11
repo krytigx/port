@@ -15,10 +15,10 @@ export default function ContactPage() {
         <div className="flex flex-col md:flex-row gap-10 md:gap-20">
           <div className="w-full md:w-1/3 mb-10 md:mb-0">
             <Link
-              href="mailto:hello@yume.com"
+              href="mailto:kryptigx@gmail.com"
               className="text-base opacity-70 hover:opacity-100 transition-opacity flex items-center"
             >
-              hello@yume.com
+              kryptigx@gmail.com
               <ExternalLink className="ml-1 h-3 w-3" />
             </Link>
           </div>
