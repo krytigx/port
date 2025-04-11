@@ -156,17 +156,17 @@ export default function HomePage() {
         </div>
       </motion.section>
 
-      <motion.section
-      className="w-full bg-black text-white py-20"
-      initial={{ height: 0 }}
-      whileInView={{ height: "auto" }}
-      viewport={{ once: true }}
-      transition={{ duration: 1.2 }}
-      >
-  <div className="text-center">
+      <div className="w-screen bg-black">
+  <motion.section
+    className="text-white py-20 text-center"
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 1.2 }}
+  >
     <h2 className="text-3xl font-bold">Let’s Build Something Beautiful Together</h2>
-  </div>
-</motion.section>
+  </motion.section>
+</div>
 
     </div>
   );
