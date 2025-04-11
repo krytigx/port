@@ -15,7 +15,7 @@ export default function HomePage() {
         transition={{ duration: 1 }}
       >
         <motion.div
-          className="flex flex-col md:flex-row gap-8"
+          className="flex flex-col gap-6"
           initial="hidden"
           animate="visible"
           variants={{
@@ -27,11 +27,10 @@ export default function HomePage() {
             }
           }}
         >
-          {/* Name & Info */}
-          <motion.div className="w-full md:w-2/3">
+          {/* Row 1: Name and Image */}
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
             <motion.h1
-              className="mb-4 leading-none"
-              style={{ fontSize: '12rem', lineHeight: '1' }}
+              className="leading-none text-[4rem] sm:text-[6rem] md:text-[12rem]"
             >
               <motion.span
                 initial={{ y: 200, opacity: 0 }}
@@ -51,9 +50,26 @@ export default function HomePage() {
               </motion.span>
             </motion.h1>
 
-            {/* Email */}
+
             <motion.div
-              className="mb-2"
+              className="w-[15rem] h-[15rem] relative overflow-hidden rounded-full"
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.8, delay: 1 }}
+            >
+              <Image
+                src="https://raw.githubusercontent.com/krytigx/Portfolio_images/refs/heads/main/place_holder.jpg"
+                alt="kryptigx"
+                fill
+                className="object-cover"
+              />
+            </motion.div>
+          </div>
+
+          {/* Row 2: Email and Description */}
+          <div className="flex flex-col md:flex-row justify-between gap-6">
+            <motion.div
+              className="flex flex-col gap-2"
               initial={{ y: 50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.6 }}
@@ -65,47 +81,22 @@ export default function HomePage() {
                 kryptigx@gmail.com
                 <ExternalLink className="ml-1 h-3 w-3" />
               </Link>
-            </motion.div>
 
-            {/* Location */}
-            <motion.div
-              className="mb-4"
-              initial={{ y: 50, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
-            >
               <div className="text-sm opacity-70 flex items-center">
                 <MapPin className="h-4 w-4 mr-1" stroke="black" fill="none" />
                 Delhi, India
               </div>
             </motion.div>
-          </motion.div>
-
-          {/* Image + Description */}
-          <motion.div
-            className="w-full md:w-1/3 flex flex-col items-end"
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 1 }}
-          >
-            <div className="w-[15rem] h-[15rem] relative overflow-hidden rounded-full">
-              <Image
-                src="https://raw.githubusercontent.com/krytigx/Portfolio_images/refs/heads/main/place_holder.jpg"
-                alt="kryptigx"
-                fill
-                className="object-cover"
-              />
-            </div>
 
             <motion.p
-              className="text-lg md:text-4xl leading-relaxed mt-[6rem] pl-[5rem] text-right"
+              className="text-lg md:text-4xl leading-relaxed md:pl-[5rem] md:pt-0 pt-2"
               initial={{ y: 50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.8, delay: 1.2 }}
+              transition={{ duration: 0.8, delay: 1 }}
             >
               Hello, I'm a freelancer specializing in minimal design with 10 years of expertise — based in Tokyo, working remote. Let's create!
             </motion.p>
-          </motion.div>
+          </div>
         </motion.div>
       </motion.section>
 
