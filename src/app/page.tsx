@@ -34,7 +34,7 @@ export default function HomePage() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="mb-4" style={{ fontSize: '12rem' }}>
-            KRYTIGX<br />GARG
+            KRYTI<br />GARG
             </h1>
 
             <motion.div
@@ -59,7 +59,7 @@ export default function HomePage() {
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <div className="w-24 h-24 md:w-64 md:h-64 relative overflow-hidden rounded">
+            <div className="w-24 h-24 md:w-94 md:h-94 relative overflow-hidden rounded">
               <Image
                 src="https://raw.githubusercontent.com/krytigx/Portfolio_images/refs/heads/main/place_holder.jpg"
                 alt="kryptigx"
@@ -67,7 +67,7 @@ export default function HomePage() {
                 className="object-cover"
               />
             </div>
-            <p className="text-lg md:text-xl leading-relaxed mt-6 text-right">
+            <p className="text-lg md:text-4xl leading-relaxed mt-6 text-right">
               Hello, I'm a freelancer specializing in minimal design with 10 years of expertise — based in Tokyo, working remote. Let's create!
             </p>
           </motion.div>
