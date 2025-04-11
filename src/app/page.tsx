@@ -33,7 +33,7 @@ export default function HomePage() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="mb-4 text-9xl">
+            <h1 className="mb-4" style={{ fontSize: '12rem' }}>
             KRYTIGX<br />GARG
             </h1>
 
@@ -157,14 +157,17 @@ export default function HomePage() {
       </motion.section>
 
       <motion.section
-        className="py-20 bg-black text-white text-center"
-        initial={{ height: 0 }}
-        whileInView={{ height: "auto" }}
-        viewport={{ once: true }}
-        transition={{ duration: 1.2 }}
+      className="w-full bg-black text-white py-20"
+      initial={{ height: 0 }}
+      whileInView={{ height: "auto" }}
+      viewport={{ once: true }}
+      transition={{ duration: 1.2 }}
       >
-        <h2 className="text-3xl font-bold">Let’s Build Something Beautiful Together</h2>
-      </motion.section>
+  <div className="text-center">
+    <h2 className="text-3xl font-bold">Let’s Build Something Beautiful Together</h2>
+  </div>
+</motion.section>
+
     </div>
   );
 }
