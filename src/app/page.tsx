@@ -67,7 +67,7 @@ export default function HomePage() {
           </div>
 
           {/* Row 2: Email and Description */}
-          <div className="flex flex-col md:flex-row justify-between gap-6">
+         <div className="flex flex-col md:flex-row justify-between gap-6">
             <motion.div
               className="flex flex-col gap-2"
               initial={{ y: 50, opacity: 0 }}
@@ -78,16 +78,16 @@ export default function HomePage() {
                 href="mailto:kryptigx@gmail.com"
                 className="text-sm opacity-70 hover:opacity-100 transition-opacity flex items-center"
               >
+                <ExternalLink className="mr-1 h-3 w-3" />
                 kryptigx@gmail.com
-                <ExternalLink className="ml-1 h-3 w-3" />
               </Link>
-
+          
               <div className="text-sm opacity-70 flex items-center">
                 <MapPin className="h-4 w-4 mr-1" stroke="black" fill="none" />
                 Delhi, India
               </div>
             </motion.div>
-
+           
             <motion.p
               className="text-lg md:text-4xl leading-relaxed mt-[6rem] pl-[6rem] text-right"
               initial={{ y: 50, opacity: 0 }}
