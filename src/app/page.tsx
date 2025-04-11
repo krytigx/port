@@ -53,11 +53,12 @@ export default function HomePage() {
 
 
             <motion.div
-              className="w-[15rem] h-[15rem] relative overflow-hidden rounded-full"
+              className="w-full md:w-1/3 flex flex-col items-center md:items-end"
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.8, delay: 1 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
             >
+
               <Image
                 src="https://raw.githubusercontent.com/krytigx/Portfolio_images/refs/heads/main/place_holder.jpg"
                 alt="kryptigx"
