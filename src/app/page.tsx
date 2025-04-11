@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function HomePage() {
@@ -29,27 +29,62 @@ export default function HomePage() {
         >
           <motion.div
             className="w-full md:w-2/3"
-            initial={{ y: 50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8 }}
+            variants={{
+              visible: {
+                transition: {
+                  staggerChildren: 0.3
+                }
+              }
+            }}
           >
-            <h1 className="mb-4" style={{ fontSize: '12rem' }}>
-            KRYTI<br />GARG
-            </h1>
+            <motion.h1
+              className="mb-4 leading-none"
+              style={{ fontSize: '12rem', lineHeight: '1' }}
+            >
+              <motion.span
+                initial={{ y: 200, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 1, delay: 0.1 }}
+                className="block"
+              >
+                KRYTI
+              </motion.span>
+              <motion.span
+                initial={{ y: 200, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 1, delay: 0.3 }}
+                className="block"
+              >
+                GARG
+              </motion.span>
+            </motion.h1>
+
 
             <motion.div
-              className="mb-4"
+              className="mb-2"
               initial={{ y: 50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
             >
               <Link
                 href="mailto:kryptigx@gmail.com"
                 className="text-sm opacity-70 hover:opacity-100 transition-opacity flex items-center"
               >
-              kryptigx@gmail.com
+                kryptigx@gmail.com
                 <ExternalLink className="ml-1 h-3 w-3" />
               </Link>
+            </motion.div>
+
+            <motion.div
+              className="mb-4"
+              initial={{ y: 50, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+            >
+              <div className="text-sm opacity-70 flex items-center">
+                <MapPin className="h-4 w-4 mr-1" stroke="black" fill="none" />
+                Delhi, India
+              </div>
             </motion.div>
           </motion.div>
 
@@ -57,9 +92,9 @@ export default function HomePage() {
             className="w-full md:w-1/3 flex flex-col items-end"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            transition={{ duration: 0.8, delay: 1 }}
           >
-            <div className="w-24 h-24 md:w-34 md:h-34 relative overflow-hidden rounded">
+            <div className="w-[12rem] h-[12rem] relative overflow-hidden rounded-full">
               <Image
                 src="https://raw.githubusercontent.com/krytigx/Portfolio_images/refs/heads/main/place_holder.jpg"
                 alt="kryptigx"
@@ -67,13 +102,19 @@ export default function HomePage() {
                 className="object-cover"
               />
             </div>
-            <p className="text-lg md:text-4xl leading-relaxed mt-6 text-right">
+            <motion.p
+              className="text-lg md:text-4xl leading-relaxed mt-6 text-right"
+              initial={{ y: 50, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8, delay: 1.2 }}
+            >
               Hello, I'm a freelancer specializing in minimal design with 10 years of expertise — based in Tokyo, working remote. Let's create!
-            </p>
+            </motion.p>
           </motion.div>
         </motion.div>
       </motion.section>
 
+      {/* WORK SECTION (unchanged) */}
       <motion.section
         className="py-16"
         initial={{ opacity: 0, y: 50 }}
@@ -123,6 +164,7 @@ export default function HomePage() {
         </div>
       </motion.section>
 
+      {/* ABOUT SECTION (unchanged) */}
       <motion.section
         className="py-16"
         initial={{ opacity: 0, y: 50 }}
@@ -155,7 +197,6 @@ export default function HomePage() {
           </div>
         </div>
       </motion.section>
-      </div>
-
+    </div>
   );
 }
