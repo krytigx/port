@@ -159,7 +159,7 @@ export default function HomePage() {
       <div className="w-screen bg-black">
       </div> 
 
-    <<motion.footer
+    <motion.footer
   className="w-screen bg-black text-white overflow-hidden"
   initial={{ y: 100, opacity: 0 }}
   whileInView={{ y: 0, opacity: 1 }}
@@ -212,6 +212,6 @@ export default function HomePage() {
     </div>
   </div>
 </motion.footer>
-    </div>
+
   );
 }
