@@ -1,10 +1,17 @@
 "use client";
 
 import Link from "next/link";
+import {motion} from "framer-motion";
 
 export function Footer() {
   return (
-    <footer className="w-full bg-black text-white py-10">
+    <motion.footer
+  className="w-full bg-black text-white py-10"
+  initial={{ y: 100, opacity: 0 }}
+  whileInView={{ y: 0, opacity: 1 }}
+  viewport={{ once: true }}
+  transition={{ duration: 1.2, ease: "easeOut" }}
+>
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-5 md:px-10">
         <div className="flex flex-col gap-1">
           <p className="text-sm">Available For Work</p>
